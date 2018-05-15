@@ -1,0 +1,53 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Students Data</h2>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+
+      <div class="col-md-5 col-sm-5 col-xs-12 form-group top_search">
+        <div class="input-group">
+          <input type="text" class="form-control" (keyup)="filterStudents($event.target.value)" placeholder="Search student by ID...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">Go!</button>
+          </span>
+        </div>
+      </div>
+      <table class="table table-striped responsive-utilities jambo_table bulk_action">
+        <thead>
+        <tr class="headings">
+          <th>
+            <input type="checkbox" id="check-all" class="flat">
+          </th>
+          <th class="column-title">ID </th>
+          <th class="column-title">Student Name</th>
+          <th class="column-title">Batch Count</th>
+          <th class="column-title">Joining Date</th>
+          <th class="column-title">Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="even pointer" *ngFor="let s of students">
+          <td class="a-center ">
+            <input type="checkbox" class="flat" name="table_records">
+          </td>
+          <td class=" ">{{s.id}}</td>
+          <td class=" ">{{s.name}}</td>
+          <td class=" ">{{s.Batches.length}}</td>
+          <td class=" ">{{s.createdAt}}</td>
+
+          <td class=" last">
+            <button class="btn btn-info btn-sm" [queryParams]="{ studentname: s.name }" [routerLink]="['/students/batches/',s.id]">Batches</button>
+            <button class="btn btn-info btn-sm">Edit</button>
+            <button class="btn btn-info btn-sm">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

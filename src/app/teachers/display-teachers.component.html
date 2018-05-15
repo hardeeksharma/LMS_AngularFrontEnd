@@ -1,0 +1,43 @@
+<div class="col-md-12 col-sm-12 col-xs-12">
+  <div class="x_panel">
+    <div class="x_title">
+      <h2>Teachers Data</h2>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+      <table class="table table-striped responsive-utilities jambo_table bulk_action">
+        <thead>
+        <tr class="headings">
+          <th>
+            <input type="checkbox" id="check-all" class="flat">
+          </th>
+          <th class="column-title">ID </th>
+          <th class="column-title">Teacher Name</th>
+          <th class="column-title">Subject</th>
+          <th class="column-title">Joining Date</th>
+          <th class="column-title">Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr class="even pointer" *ngFor="let t of teachers; let i=index">
+          <td class="a-center ">
+            <input type="checkbox" class="flat" name="table_records">
+          </td>
+          <td class=" ">{{i}}</td>
+          <td class=" ">{{t.name}}</td>
+          <td class=" ">{{t.subject.name}}<i class="success fa fa-long-arrow-up"></i></td>
+          <td class=" ">{{t.createdAt}}</td>
+
+          <td class=" last"><a href="#">View</a>
+          </td>
+        </tr>
+
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="col-md-3 left_col">
+  <div class="left_col scroll-view">
+
+    <div class="navbar nav_title" style="border: 0;">
+      <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>LMS</span></a>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- menu prile quick info -->
+    <div class="profile">
+      <div class="profile_pic">
+        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+      </div>
+      <div class="profile_info">
+        <span>Welcome,</span>
+        <h2>John Doe</h2>
+      </div>
+    </div>
+    <!-- /menu prile quick info -->
+
+    <br />
+
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+      <div class="menu_section">
+        <h3>General</h3>
+        <ul class="nav side-menu">
+          <li><a><i class="fa fa-laptop"></i>Dashboard</a>
+          <li><a><i class="fa fa-home"></i>Course<span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+              <li><a [routerLink]="['/courses']">All Courses</a>
+              </li>
+              <li><a [routerLink]="['/courses/add']">Add New Course</a>
+              </li>
+              <li>Batches
+                <ul class="nav child_menu" style="display: none">
+                  <li><a href="form.html">All Batches</a>
+                  </li>
+                  <li><a href="form.html">Add New Batches</a>
+                  </li>
+                  <li>Lectures
+                    <ul class="nav child_menu" style="display: none">
+                      <li><a href="form.html">All Lectures</a>
+                      </li>
+                      <li><a href="form.html">Add Lectures</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Students
+                    <ul class="nav child_menu" style="display: none">
+                      <li><a href="form.html">All Students</a>
+                      </li>
+                      <li><a href="form.html">Add Student To Batch</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a><i class="fa fa-edit"></i> Student <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+              <li><a [routerLink]="['/students']">All Students</a>
+              </li>
+              <li><a  href="#" [routerLink]="['/students/add']">New Student</a>
+              </li>
+              <li><a [routerLink]="['/students/search']">Search Student By Id</a>
+              </li>
+              <li><a href="#" [routerLink]="['/students/add/batch']">Add Student to batch</a>
+            </ul>
+          </li>
+          <li><a><i class="fa fa-desktop"></i> Subject <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+              <li><a href="#" [routerLink]="['/subjects']">All Subjects</a>
+              </li>
+              <li><a href="#" [routerLink]="['/subjects','add']">Add New Subject</a>
+              </li>
+
+            </ul>
+          </li>
+          <li><a><i class="fa fa-table"></i> Teacher <span class="fa fa-chevron-down"></span></a>
+            <ul class="nav child_menu" style="display: none">
+
+              <li><a [routerLink]="['/teachers']">All Teachers</a>
+              </li>
+              <li><a [routerLink]="['/teachers/add']">Add New Teacher</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+    <!-- /sidebar menu -->
+  </div>
+</div>
