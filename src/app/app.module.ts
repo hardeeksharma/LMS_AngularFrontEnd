@@ -64,7 +64,7 @@ import { DisplayStudentBatchComponent } from './students/display-student-batch/d
       { path: 'students', component: DisplayStudentComponent},
       { path: 'students/add', component: AddStudentComponent},
       { path: 'students/search', component: SearchByIdComponent},
-      { path: 'students/add/batch', component: AddStudentToBatchComponent},
+      { path: 'students/add/batch/:sid', component: AddStudentToBatchComponent},
       { path: 'students/batches/:sid', component: DisplayStudentBatchComponent},
 
       { path: 'courses', component: DisplayCoursesComponent},

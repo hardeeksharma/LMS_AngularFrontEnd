@@ -32,8 +32,8 @@
           <td class=" ">{{s.createdAt}}</td>
 
           <td class=" last">
-            <button class="btn btn-info btn-sm" [queryParams]="{ studentname: s.name }" [routerLink]="['/students/batches/',s.id]">Batches</button>
-            <button class="btn btn-info btn-sm">Edit</button>
+            <button class="btn btn-info btn-sm" [queryParams]="{studentname: s.name }" [routerLink]="['/students/batches/',s.id]">Batches</button>
+            <button class="btn btn-info btn-sm" [queryParams]="{studentname:s.name}" [routerLink]="['/students/add/batch',s.id]" >Add to batch</button>
             <button class="btn btn-info btn-sm">Delete</button>
           </td>
         </tr>

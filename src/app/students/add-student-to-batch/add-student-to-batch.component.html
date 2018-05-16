@@ -9,34 +9,36 @@
       <br>
       <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
         <div class="form-group">
-          <label class="control-label col-md-3 col-sm-3 col-xs-12">Student List</label>
+          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Student Name <span class="required">*</span>
+          </label>
           <div class="col-md-6 col-sm-6 col-xs-12">
-            <select class="form-control">
-              <option>Choose option</option>
-              <option>Option one</option>
-              <option>Option two</option>
-              <option>Option three</option>
-              <option>Option four</option>
+            <input type="text" id="name" readonly #inp class="form-control col-md-7 col-xs-12"
+                   data-parsley-id="5150" [value]="studentname">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-md-3 col-sm-3 col-xs-12">Courses</label>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <select class="form-control" #course (change)="getBatchByCourse(course.value)">
+              <option value="-1">Choose Course</option>
+              <option *ngFor="let c of courses" [value]="c.id">{{c.name}}</option>
+
             </select>
           </div>
         </div>
-
         <div class="form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12">Batch</label>
           <div class="col-md-6 col-sm-6 col-xs-12">
-            <select class="form-control">
-              <option>Choose option</option>
-              <option>Option one</option>
-              <option>Option two</option>
-              <option>Option three</option>
-              <option>Option four</option>
+            <select class="form-control" #batch>
+              <option value="-1">Choose batch</option>
+              <option *ngFor="let b of batches" [value]="b.id">{{b.name}}</option>
             </select>
           </div>
         </div>
         <div class="ln_solid"></div>
         <div class="form-group">
           <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-            <button type="button" class="btn btn-success">Submit</button>
+            <button type="button" class="btn btn-success" (click)="addStudentToBatch(course.value,batch.value)">Submit</button>
           </div>
         </div>
       </form>
