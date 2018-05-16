@@ -9,7 +9,7 @@ export class StudentService {
     })
   };
 
-  private url: string = "http://localhost:7777/students/";
+  private url: string = "https://lmsapiexpress.herokuapp.com/students/";
 
   constructor(private http: HttpClient) {
   }

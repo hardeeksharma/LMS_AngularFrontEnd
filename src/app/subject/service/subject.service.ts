@@ -8,8 +8,8 @@ export class SubjectService {
       'Content-Type': 'application/json; charset=utf-8',
     })
   };
-  private url: string = "http://localhost:7777/subjects";
-  private URL_NEW_SUBJECT: string = "http://localhost:7777/subjects/courses/";
+  private url: string = "https://lmsapiexpress.herokuapp.com/subjects";
+  private URL_NEW_SUBJECT: string = "https://lmsapiexpress.herokuapp.com/subjects/courses/";
 
   constructor(private http: HttpClient) {
   }

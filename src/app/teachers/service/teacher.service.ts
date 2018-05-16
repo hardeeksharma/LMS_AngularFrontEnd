@@ -8,7 +8,7 @@ export class TeacherService {
       'Content-Type': 'application/json; charset=utf-8',
     })
   };
-  private url: string = "http://localhost:7777/teachers/";
+  private url: string = "https://lmsapiexpress.herokuapp.com/teachers/";
 
   constructor(private http: HttpClient) {
   }

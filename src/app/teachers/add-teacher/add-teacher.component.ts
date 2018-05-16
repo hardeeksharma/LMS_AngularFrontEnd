@@ -26,7 +26,7 @@ export class AddTeacherComponent implements OnInit {
 
   addTeacher(fname: string, lname: string, sid: number) {
     let teacher={
-      name:fname
+      name:fname+ " " + lname
     }
     this.teacherService.addTeacher(JSON.stringify(teacher), sid).subscribe((data) => {
       swal("Good job!", "Teacher Added", "success");

@@ -8,9 +8,9 @@ export class CoursesService {
       'Content-Type': 'application/json; charset=utf-8',
     })
   };
-  private url: string = "http://localhost:7777/courses";
+  private url: string = "https://lmsapiexpress.herokuapp.com/courses";
 
-  private allBatchUrl = "http://localhost:7777/courses/batches/";
+  private allBatchUrl = "https://lmsapiexpress.herokuapp.com/batches/";
 
   constructor(private http: HttpClient) {
   }

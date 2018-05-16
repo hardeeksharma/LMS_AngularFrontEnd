@@ -48,6 +48,7 @@ import { DisplayStudentBatchComponent } from './students/display-student-batch/d
     DisplayBatchComponent,
     AddBatchComponent,
     DisplayStudentBatchComponent,
+    DisplayBatchComponent
   ],
   imports: [
     BrowserModule,HttpClientModule,
